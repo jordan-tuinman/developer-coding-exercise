@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-function getPostInfo() {
+function getPostsInfo() {
   const dir = path.join(__dirname, '../../assets/posts')
   const fileNames = fs.readdirSync(dir)
 
@@ -18,7 +18,7 @@ function getPostInfo() {
   return postTitleSlug
 }
 
-console.log(getPostInfo())
+console.log(getPostsInfo())
 
 function getPostContent(title) {
   const post = path.join(__dirname, `../../assets/posts/${title}.md`)
@@ -29,3 +29,11 @@ function getPostContent(title) {
 
 console.log(typeof getPostContent('mediasuite-tech-stack'))
 console.log(getPostContent('mediasuite-tech-stack'))
+
+// TODO: remove console.logs
+// TODO: create title case function
+
+module.exports = {
+  getPostContent,
+  getPostsInfo,
+}

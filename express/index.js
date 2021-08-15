@@ -3,6 +3,9 @@ const { getTopWords } = require('./utils/tags')
 const app = express()
 const rootPostDir = './server/assets/posts'
 
+// Util functions:
+const { getPostsInfo, getPostContent } = require('./utils/posts')
+
 app.use(express.json())
 app.use(express.static('./public'))
 
@@ -16,7 +19,14 @@ app.use(express.static('./public'))
  * }
  */
 app.get('/post/:slug', function (req, res) {
-  // ... fill in your own code ...
+  const { slug } = req.params
+  const content = getPostContent(slug)
+  // const tags = getTopWords()
+  const post = {
+    content: content,
+    tags: ['this', 'will', 'be', 'tags', 'array'],
+  }
+  res.json({ post })
 })
 
 /**
@@ -30,7 +40,8 @@ app.get('/post/:slug', function (req, res) {
  * ]
  */
 app.get('/posts', function (req, res) {
-  // ... fill in you own code ...
+  const postsList = getPostsInfo()
+  res.json(postsList)
 })
 
 app.listen(3000, function () {
