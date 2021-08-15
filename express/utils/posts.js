@@ -6,7 +6,7 @@ function getPostsInfo() {
   const fileNames = fs.readdirSync(dir)
 
   const postTitleSlug = fileNames.map((file) => {
-    const title = file.replace('.md', '').split('-').join(' ')
+    const title = titleCase(file.replace('.md', '').split('-').join(' '))
     const slug = file.replace('.md', '')
     return {
       title: title,
@@ -24,7 +24,13 @@ function getPostContent(title) {
   return content
 }
 
-// TODO: create title case function
+function titleCase(str) {
+  str = str.split(' ')
+  str = str.map((word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1)
+  })
+  return str.join(' ')
+}
 
 module.exports = {
   getPostContent,
