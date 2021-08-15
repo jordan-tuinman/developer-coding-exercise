@@ -194,7 +194,9 @@ var Post = function Post(props) {
     });
   }, []);
   var paragraphs = postContent === null || postContent === void 0 ? void 0 : postContent.content.split('\n');
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "This will be an individual blog post"), paragraphs === null || paragraphs === void 0 ? void 0 : paragraphs.map(function (paragraph, i) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "Back"), paragraphs === null || paragraphs === void 0 ? void 0 : paragraphs.map(function (paragraph, i) {
     return paragraph[0] === '#' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
       key: i
     }, paragraph.replace('#', '')) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {

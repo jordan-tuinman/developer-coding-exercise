@@ -17,7 +17,7 @@ const Post = (props) => {
 
   return (
     <>
-      <h2>This will be an individual blog post</h2>
+      <Link to="/">Back</Link>
       {paragraphs?.map((paragraph, i) =>
         paragraph[0] === '#' ? (
           <h1 key={i}>{paragraph.replace('#', '')}</h1>
@@ -26,6 +26,7 @@ const Post = (props) => {
         )
       )}
       <h2>Tags</h2>
+      {/* placeholder data for if time to complete tags function */}
       {postContent?.tags.map((tag, i) => (
         <span key={i}>{tag}, </span>
       ))}
