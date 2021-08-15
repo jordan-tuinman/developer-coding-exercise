@@ -41,6 +41,7 @@
     "babel-jest": "^25.3.0",
     "babel-loader": "^8.1.0",
     "jest": "^25.3.0",
+    "nock": "^13.1.1",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
