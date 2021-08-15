@@ -18,8 +18,6 @@ function getPostsInfo() {
   return postTitleSlug
 }
 
-console.log(getPostsInfo())
-
 function getPostContent(title) {
   const post = path.join(__dirname, `../../assets/posts/${title}.md`)
   const content = fs.readFileSync(post, 'utf-8')
@@ -27,10 +25,6 @@ function getPostContent(title) {
   return content
 }
 
-console.log(typeof getPostContent('mediasuite-tech-stack'))
-console.log(getPostContent('mediasuite-tech-stack'))
-
-// TODO: remove console.logs
 // TODO: create title case function
 
 module.exports = {
