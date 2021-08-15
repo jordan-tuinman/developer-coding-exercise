@@ -11,6 +11,9 @@ install dependencies
 #### `npm run dev`
 run the development server to view blog at localhost:3000
 
+#### `npm run test`
+run tests created
+
 
 
 # Original Readme Below:
