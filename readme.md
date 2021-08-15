@@ -1,4 +1,19 @@
 # Media Suite Coding Exercise
+
+## Running Blog
+
+#### `cd express`
+navigate to 'express' folder
+
+#### `npm install`
+install dependencies
+
+#### `npm run dev`
+run the development server to view blog at localhost:3000
+
+
+
+# Original Readme Below:
 We’d like you to build a blogging platform!
 
 This is designed as a relatively simple exercise to get some code we can talk about in our technical interview. Not all developers have code that they can share with us due to IP restrictions, and this provides a common scenario across all candidates that provides some level of objective measure.
