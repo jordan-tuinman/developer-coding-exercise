@@ -3,6 +3,9 @@ const { getTopWords } = require('./utils/tags')
 const app = express()
 const rootPostDir = './server/assets/posts'
 
+app.use(express.json())
+app.use(express.static('./public'))
+
 /**
  *  Returns the detail of an individual post in json, formatted as:
  * {
