@@ -14,7 +14,6 @@ function getPostsInfo() {
     }
   })
   // return JSON array
-  console.log(postTitleSlug)
   return postTitleSlug
 }
 
