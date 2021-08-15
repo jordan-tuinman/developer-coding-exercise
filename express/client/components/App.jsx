@@ -10,7 +10,7 @@ const App = () => {
     <>
       <h1>Media Suite Blog</h1>
       <Route exact path="/" component={PostsList} />
-      <Route exact path="/posts/:slug" component={Post} />
+      <Route exact path="/post/:slug" component={Post} />
     </>
   )
 }
